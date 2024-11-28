@@ -4,77 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-
-        h2 {
-            border-bottom: 1px solid #000;
-            padding-bottom: 5px;
-        }
-
-        form {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        input, select, textarea {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        input[type="checkbox"], input[type="radio"] {
-            width: auto;
-            margin-right: 5px;
-        }
-
-        .inline-group {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
-
-        .form-group-inline {
-            display: flex;
-            gap: 20px;
-        }
-
-        .form-group-inline > div {
-            flex: 1;
-        }
-
-        small {
-            display: block;
-            font-size: 12px;
-            color: #666;
-        }
-
-        .counter {
-            font-size: 12px;
-            text-align: right;
-            color: #666;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form>
-        <h2>Datos Usuario</h2>
+    <form method="post" action="https://www.w3schools.com/action_page.php">
+        <p>Datos Usuario</p>
         <div class="form-group-inline">
             <div>
                 <label for="username">Nombre de Usuario</label>
@@ -90,7 +24,7 @@
             </div>
         </div>
 
-        <h2>Datos Personales</h2>
+        <p>Datos Personales</p>
         <div class="form-group-inline">
             <div>
                 <label for="nombre">Nombre</label>
@@ -127,10 +61,12 @@
             <div>
                 <label>Crear cuenta como:</label>
                 <div>
-                    <input type="radio" name="cuenta" id="particular" value="particular">
                     <label for="particular">Particular</label>
-                    <input type="radio" name="cuenta" id="empresa" value="empresa">
+                    <input type="radio" name="cuenta" id="particular" value="particular">
+
                     <label for="empresa">Empresa</label>
+                    <input type="radio" name="cuenta" id="empresa" value="empresa">
+
                 </div>
             </div>
             <div>
@@ -142,7 +78,7 @@
                 </select>
             </div>
         </div>
-
+<!--Poner name a todo-->
         <div class="form-group">
             <label>Elige tus aficiones:</label>
             <div class="inline-group">
@@ -173,7 +109,7 @@
             </div>
         </div>
 
-        <h2>Datos Publicación</h2>
+        <p>Datos Publicación</p>
         <div class="form-group">
             <label for="titulo">Título</label>
             <input type="text" id="titulo" placeholder="Título" maxlength="15">
@@ -185,6 +121,7 @@
             <textarea id="descripcion" rows="4" placeholder="Descripción" maxlength="120"></textarea>
             <div class="counter">0 / 120</div>
         </div>
+   <button type="submit">Enviar</button>
     </form>
 </body>
 </html>
