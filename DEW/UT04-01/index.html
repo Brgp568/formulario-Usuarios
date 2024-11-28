@@ -1,11 +1,190 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            border-bottom: 1px solid #000;
+            padding-bottom: 5px;
+        }
+
+        form {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="checkbox"], input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        .inline-group {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .form-group-inline {
+            display: flex;
+            gap: 20px;
+        }
+
+        .form-group-inline > div {
+            flex: 1;
+        }
+
+        small {
+            display: block;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .counter {
+            font-size: 12px;
+            text-align: right;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
-    <p>Hola mundo</p>
+    <form>
+        <h2>Datos Usuario</h2>
+        <div class="form-group-inline">
+            <div>
+                <label for="username">Nombre de Usuario</label>
+                <input type="text" id="username" placeholder="UserName">
+            </div>
+            <div>
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" placeholder="Introduce Contraseña">
+                <div>
+                    <input type="checkbox" id="show-password">
+                    <label for="show-password">Mostrar Contraseña</label>
+                </div>
+            </div>
+        </div>
+
+        <h2>Datos Personales</h2>
+        <div class="form-group-inline">
+            <div>
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" placeholder="Nombre">
+            </div>
+            <div>
+                <label for="apellidos">Apellidos</label>
+                <input type="text" id="apellidos" placeholder="Apellidos">
+            </div>
+        </div>
+
+        <div class="form-group-inline">
+            <div>
+                <label for="telefono">Teléfono</label>
+                <input type="text" id="telefono" placeholder="Ejem: (+34)922123123">
+            </div>
+            <div>
+                <label for="codigo-postal">Código Postal</label>
+                <input type="text" id="codigo-postal" placeholder="38XXX">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="dni">DNI/NIE</label>
+            <select id="dni">
+                <option value="" selected>---</option>
+                <option value="dni">DNI</option>
+                <option value="nie">NIE</option>
+            </select>
+            <input type="text" placeholder="DNI / NIE">
+        </div>
+
+        <div class="form-group-inline">
+            <div>
+                <label>Crear cuenta como:</label>
+                <div>
+                    <input type="radio" name="cuenta" id="particular" value="particular">
+                    <label for="particular">Particular</label>
+                    <input type="radio" name="cuenta" id="empresa" value="empresa">
+                    <label for="empresa">Empresa</label>
+                </div>
+            </div>
+            <div>
+                <label for="año-nacimiento">Año de Nacimiento</label>
+                <select id="año-nacimiento">
+                    <option value="2010" selected>2010</option>
+                    <option value="2009">2009</option>
+                    <option value="2008">2008</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Elige tus aficiones:</label>
+            <div class="inline-group">
+                <div>
+                    <input type="checkbox" id="musica">
+                    <label for="musica">Música</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="deporte">
+                    <label for="deporte">Deporte</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="videojuegos">
+                    <label for="videojuegos">Video Juegos</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="manualidades">
+                    <label for="manualidades">Manualidades</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="artes">
+                    <label for="artes">Artes</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="lectura">
+                    <label for="lectura">Lectura</label>
+                </div>
+            </div>
+        </div>
+
+        <h2>Datos Publicación</h2>
+        <div class="form-group">
+            <label for="titulo">Título</label>
+            <input type="text" id="titulo" placeholder="Título" maxlength="15">
+            <div class="counter">0 / 15</div>
+        </div>
+
+        <div class="form-group">
+            <label for="descripcion">Descripción</label>
+            <textarea id="descripcion" rows="4" placeholder="Descripción" maxlength="120"></textarea>
+            <div class="counter">0 / 120</div>
+        </div>
+    </form>
 </body>
 </html>
