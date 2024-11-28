@@ -63,3 +63,11 @@ small {
     text-align: right;
     color: #666;
 }
+
+
+input:valid, select:valid, textarea:valid {
+            border: 2px solid green; 
+}
+ input:invalid, select:invalid, textarea:invalid {
+            border: 2px solid red;
+}
