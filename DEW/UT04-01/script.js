@@ -9,3 +9,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+const enviarButton = document.getElementById("enviarButton");
+const inputUserName = document.getElementById("username");
+
+enviarButton.addEventListener("click",function(event){
+    if(inputUserName = ""){
+        alert("hola");
+        
+    }
+});
