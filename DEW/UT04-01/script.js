@@ -11,34 +11,45 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 const cbMusica = document.getElementById('musica');
-const cbDeportes = document.getElementById('deportes');
+const cbDeportes = document.getElementById('deporte');
 const cbVideoJuegos = document.getElementById('videojuegos');
 const cbManualidades = document.getElementById('manualidades');
 const cbArtes = document.getElementById('artes');
+const cbLectura = document.getElementById('lectura');
 
 
 const aficiones = document.getElementById('aficiones');
 
-function stringAficiones(aficiones,cbMusica,cbDeportes,cbVideoJuegos,cbManualidades,cbArtes){
-
-if(cbMusica.checked == true){
-  
+function stringAficiones(){
+    let aficionesString = ''; 
+if(cbMusica.checked ){
+    //Concatenacion de caracteres (con +=)
+    aficionesString += 'MU';
 }
-if(cbDeportes.checked == true){
-
-}
-
-if(cbVideoJuegos.checked == true){
-
+if(cbDeportes.checked){
+    aficionesString += 'DE';
 }
 
-if(cbManualidades.checked == true){
+if(cbVideoJuegos.checked ){
+    aficionesString += 'VI';
 
-}
-
-if(cbArtes.checked == true){
 
 }
 
+if(cbManualidades.checked){
+    aficionesString += 'MA';
+
+}
+
+if(cbArtes.checked){
+    aficionesString += 'AR';
+
+}
+
+if(cbLectura.checked){
+    aficionesString += 'LE';
+
+}
+aficiones.value = aficionesString;
 
 }

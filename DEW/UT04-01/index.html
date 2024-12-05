@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
 
 </head>
 <body>
@@ -93,7 +92,7 @@
                 <label>Elige tus aficiones:</label>
                 <div class="inline-group">
                     <div>
-                        <input type="checkbox" id="musica" name="aficionesa" value="musica">
+                        <input type="checkbox" id="musica"  value="musica">
                         <label for="musica">Música</label>
                     </div>
                     <div>
@@ -116,7 +115,7 @@
                         <input type="checkbox" id="lectura" value="lectura">
                         <label for="lectura">Lectura</label>
                     </div>
-                    <input type="hidden" name="aficiciones" id="aficiones">
+                    <input type="hidden" name="aficiones" id="aficiones">
                 </div>
             </div>
         </fieldset>
@@ -137,8 +136,9 @@
             </div>
         </fieldset>
 
-        <button type="submit" id="enviarButton">Enviar</button>
+        <button type="submit" id="enviarButton" onclick="stringAficiones()">Enviar</button>
     </form>
+    <script src="script.js"></script>
 
 </body>
 </html>
