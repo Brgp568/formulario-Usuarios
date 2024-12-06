@@ -16,40 +16,53 @@ const cbVideoJuegos = document.getElementById('videojuegos');
 const cbManualidades = document.getElementById('manualidades');
 const cbArtes = document.getElementById('artes');
 const cbLectura = document.getElementById('lectura');
-
-
 const aficiones = document.getElementById('aficiones');
+const selectAñoNacimiento = document.getElementById("año-nacimiento");
 
+//Funcion para el envio de aficiones
 function stringAficiones(){
     let aficionesString = ''; 
 if(cbMusica.checked ){
     //Concatenacion de caracteres (con +=)
-    aficionesString += 'MU';
+    aficionesString += '"MU",';
 }
 if(cbDeportes.checked){
-    aficionesString += 'DE';
+    aficionesString += '"DE"';
 }
 
 if(cbVideoJuegos.checked ){
-    aficionesString += 'VI';
+    aficionesString += '"VI",';
 
 
 }
 
 if(cbManualidades.checked){
-    aficionesString += 'MA';
+    aficionesString += '"MA",';
 
 }
 
 if(cbArtes.checked){
-    aficionesString += 'AR';
+    aficionesString += '"AR",';
 
 }
 
 if(cbLectura.checked){
-    aficionesString += 'LE';
+    aficionesString += '"LE"';
 
 }
 aficiones.value = aficionesString;
 
 }
+
+//For para que en el option salgan los años de 1920 al 2010
+
+for (let año = 1920; año <= 2010; año++) {
+    const option = document.createElement("option");
+    option.value = año; 
+    option.textContent = año; 
+    selectAñoNacimiento.appendChild(option);}
+
+
+
+
+    
